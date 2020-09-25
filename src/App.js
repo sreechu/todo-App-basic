@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
@@ -15,16 +15,16 @@ function App() {
       if (todo.id !== id) {
         return todo;
       }
-    }};
+    });
     // Update state with filter
-    setData({ data: remainder });
-  });
+    setData({ remainder });
+  };
 
-  const addTodo = useCallback((val) => {
+  const addTodo = (val) => {
     //build a todo Object out of the value entered with a unique ID and push it
     const todoObj = { text: val, id: window_id++ };
-    setData({ data: data.push(todoObj) });
-  }, []);
+    setData(data.push(todoObj));
+  };
 
   return (
     <div>
