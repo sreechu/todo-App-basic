@@ -2,6 +2,7 @@ import React from "react";
 import Todo from "./Todo";
 
 const TodoList = ({ todos, remove }) => {
+  console.log("todo output below2");
   console.log({ todos });
 
   // Map through the todos

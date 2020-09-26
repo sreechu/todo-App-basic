@@ -17,13 +17,16 @@ function App() {
       }
     });
     // Update state with filter
-    setData({ remainder });
+    setData([...remainder]);
   };
 
   const addTodo = (val) => {
     //build a todo Object out of the value entered with a unique ID and push it
     const todoObj = { text: val, id: window_id++ };
-    setData(data.push(todoObj));
+    console.log({ todoObj });
+    //var addedArray = data.concat(new Array(todoObj));
+    console.log([...data]);
+    setData([...data], todoObj);
   };
 
   return (

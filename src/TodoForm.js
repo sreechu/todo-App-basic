@@ -14,6 +14,7 @@ function TodoForm({ addTodo }) {
       ></input>
       <button
         onClick={() => {
+          console.log(">>> " + input.value);
           addTodo(input.value);
           input.value = "";
         }}
