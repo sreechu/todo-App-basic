@@ -10,8 +10,9 @@ function App() {
   const [data, setData] = useState([]);
 
   const handleRemove = (id) => {
+    console.log("clicked");
     // Filter all todos except the one to be removed
-    const remainder = data.filter((todo) => {
+    const remainder = Object.entries(data).filter((todo) => {
       if (todo.id !== id) {
         return todo;
       }
@@ -21,16 +22,14 @@ function App() {
   };
 
   const addTodo = (val) => {
-    //build a todo Object out of the value entered with a unique ID and push it
     const todoObj = { text: val, id: window_id++ };
-    console.log({ todoObj });
-    //var addedArray = data.concat(new Array(todoObj));
-    console.log([...data]);
-    setData([...data], todoObj);
+    setData([...data, todoObj]);
   };
 
   return (
-    <div>
+    <div className="App">
+      <div className="button"></div>
+      <h1>to-do</h1>
       <TodoForm addTodo={addTodo} />
       <TodoList todos={data} remove={handleRemove} />
     </div>

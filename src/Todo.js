@@ -1,7 +1,14 @@
 import React from "react";
-
-const Todo = ({ todo, remove }) => {
-  return <li onClick={remove(todo.id)}>{todo.text}</li>;
+import "./Todo.css";
+import Typist from "react-typist";
+const Todo = (props) => {
+  return (
+    <div>
+      <li>
+        <Typist className="typed-words">{props.todo[1].text}</Typist>
+      </li>
+    </div>
+  );
 };
 
 export default Todo;

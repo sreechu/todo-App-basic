@@ -6,7 +6,6 @@ let input;
 function TodoForm({ addTodo }) {
   return (
     <div>
-      <h1>to-do</h1>
       <input
         ref={(node) => {
           input = node;
@@ -14,8 +13,9 @@ function TodoForm({ addTodo }) {
       ></input>
       <button
         onClick={() => {
-          console.log(">>> " + input.value);
-          addTodo(input.value);
+          if (input.value) {
+            addTodo(input.value);
+          }
           input.value = "";
         }}
       >
