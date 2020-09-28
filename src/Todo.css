@@ -1,5 +1,5 @@
 div:hover li {
-  animation: shake 0.8s;
+  /*animation: shake 0.8s;*/
 }
 
 @keyframes shake {

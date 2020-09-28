@@ -1,13 +1,47 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+svg {
+  width: 96px;
+  height: auto;
+  /*transform: rotate(180deg);
+  transform-origin: 50% 50%;
+  -webkit-animation: rotate 4s cubic-bezier(0.49, 0.05, 0.32, 1.04) infinite
+    alternate;
+  animation: rotate 4s cubic-bezier(0.49, 0.05, 0.32, 1.04) infinite alternate;
+   */
+}
+@-webkit-keyframes rotate {
+  50% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+header {
+  position: relative;
+  height: 200px;
+  min-height: 400px;
+  width: 100%;
+  background: #161415 url(./images/bgImg.png) no-repeat;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  text-align: center;
+  overflow: hidden;
+  filter: alpha(opacity=80); /* For IE 8 & 9 (more valid) */
 }
