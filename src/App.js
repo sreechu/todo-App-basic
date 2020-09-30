@@ -11,6 +11,7 @@ function App() {
   //const [counter, setCounter] = useState(1);
   const handleRemove = (id) => {
     console.log("id val is " + id);
+
     // Filter all todos except the one to be removed
     const remainder = data.filter((todo) => {
       if (todo.id !== id) {
@@ -31,7 +32,7 @@ function App() {
     <div className="App">
       <header id="home">
         <ReactLogo />
-        <h1>To-do</h1>
+        <p>TO DO</p>
         <TodoForm addTodo={addTodo} />
       </header>
       <TodoList todos={data} remove={handleRemove} />

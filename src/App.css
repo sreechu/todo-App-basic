@@ -90,3 +90,24 @@ h1 {
   left: 13px;
   top: 9px;
 }*/
+
+p {
+  position: relative;
+  font-family: Impact, sans-serif;
+  font-size: 45px;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, white, gray, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}

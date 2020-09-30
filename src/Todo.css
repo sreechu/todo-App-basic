@@ -1,23 +1,15 @@
-div:hover li {
-  /*animation: shake 0.8s;*/
-}
-
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(25px);
-  }
-
-  50% {
-    transform: translateX(-25px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-
 ul {
   list-style-type: none;
+}
+
+.typed-words {
+  padding-right: 10rem;
+  padding-top: 1rem;
+}
+li:hover {
+  margin-left: -10px;
+  padding-left: 10px;
+  color: grey;
+  font-weight: bold;
+  width: 100%;
 }

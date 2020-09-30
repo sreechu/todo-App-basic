@@ -16,7 +16,9 @@ const Todo = (props) => {
           callMe(props.todo[1].id);
         }}
       >
-        <Typist className="typed-words">{props.todo[1].text}</Typist>
+        <h2>
+          <Typist className="typed-words">{props.todo[1].text}</Typist>
+        </h2>
       </li>
     </div>
   );
